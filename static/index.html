@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bromley — approved new dwellings</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header>
+    <div class="titles">
+      <h1>Bromley — approved new dwellings</h1>
+      <p class="sub">Granted planning permissions for new homes in the London Borough of Bromley</p>
+    </div>
+    <div class="filters">
+      <label>Decided from <input type="date" id="from"></label>
+      <label>Decided to <input type="date" id="to"></label>
+      <label class="check"><input type="checkbox" id="include-all"> Show all permissions mentioning “dwelling”</label>
+      <button id="apply">Apply</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="list-pane">
+      <div id="summary" class="summary">Loading…</div>
+      <p class="hint">Bromley’s register has no direct links to individual applications — use <strong>Full record &amp; documents</strong> for the complete case, or copy the reference and paste it into the register’s search.</p>
+      <ul id="results"></ul>
+    </section>
+    <section id="map"></section>
+  </main>
+
+  <footer>
+    <span id="status-line"></span>
+    <span>
+      Data via <a href="https://www.planit.org.uk/" target="_blank" rel="noopener">PlanIt</a>,
+      sourced from the
+      <a href="https://planningaccess.bromley.gov.uk/pr/s/" target="_blank" rel="noopener">London Borough of Bromley public register</a>.
+      Approved drawings remain the copyright of the applicant or architect and are linked, not rehosted.
+    </span>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
